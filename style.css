@@ -1,0 +1,58 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.ttf");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mlui", sans-serif;
+  /* display: flex; */
+  align-items: CE;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden; /*scroll bar hide or unhide */
+  margin: 0;
+}
+h1 {
+  margin-left: 20px;
+}
+.container {
+  display: flex;
+  width: 90vw;
+}
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color:#fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+.panel h3 {
+  font-size: 7vh;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.panel.active {
+  flex: 2;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-last-of-type(7),
+  .panel:nth-last-of-type(8) {
+    display: none;
+  }
+}
